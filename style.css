@@ -1,0 +1,117 @@
+/* HOMEPAGE */
+.site-background
+{
+    background-color: black;
+}
+.Container
+{
+    position:relative;
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    max-height: 1000px;
+    margin:auto;
+}
+h1
+{
+    line-height: 175px;
+    padding-top: 100px;
+}
+p
+{
+    color:white;
+}
+a
+{
+    text-decoration: none;
+}
+.text
+{
+    font-size: 75px;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+}
+.Hello:after
+{
+    content: 'Hello!';
+}
+.Hello:hover:after
+{
+    content: 'About me';
+}
+.Iam:after
+{
+    content: 'I am';
+    color:red;
+}
+.Iam:hover:after
+{
+    content: 'Work';
+    color:white;
+}
+.Codrut:after
+{
+    content: "Codrut";
+    color: red;
+}
+.Codrut:hover:after
+{
+    content: 'Contact';
+    color:white;
+}
+
+.animate 
+{
+	-moz-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-webkit-animation-fill-mode:backwards;
+	-moz-animation-fill-mode:backwards;
+	animation-fill-mode:backwards;
+}
+@keyframes animate 
+{
+	0% {opacity: 0;transform: translateY(30vh);} /* WORK ON THISSS! */
+/* 	0% {transform: translateY(100%);} */
+	100% {opacity: 1;transform: translateY(0%);}	
+}
+.image
+{
+    z-index: -9;	
+	position: fixed;
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 25%;
+    background-image: url(profile3.jpg);
+	background-repeat: no-repeat; 
+}
+@media screen and (max-width:769px)
+ {
+    .image 
+    {
+        left: 5%;
+    }
+    h1
+    {
+        padding-top: 75px;
+    }
+    .text
+    {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width:480px)
+ {
+    .image 
+    {
+        left: -25%;
+    }
+    h1
+    {
+        padding-top: 50px;
+    }
+    .text
+    {
+        font-size: 50px;
+    }
+}
