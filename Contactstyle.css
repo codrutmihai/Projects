@@ -1,0 +1,173 @@
+body
+{
+    background-color: black;
+}
+.title-box
+{
+    width: 60%;
+    margin: auto;
+    position: relative;
+    padding-top: 50px;
+    text-align: center;
+}
+.title-size
+{
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+}
+.contact-box
+{
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+.contact-text
+{
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+}
+.links
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+}
+a
+{
+  text-decoration: none;
+  color:#800000;
+}
+
+/* HOVER */
+
+.on-hover
+{
+	transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.on-hover:hover 
+{
+	margin-left: 40px;
+	transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);	
+}
+
+/* NAV BAR */
+
+#menu {
+    z-index: 2;
+  }
+  
+  #menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  
+  #bar3 {
+    transform: translateY(4px);
+  }
+  
+  .nav {
+    transition: 0.3s ease;
+    display: none;
+  }
+  
+  .nav ul {
+    padding: 0 22px;
+  }
+  
+  .nav li {
+    list-style: none;
+    padding: 12px 0;
+  }
+  
+  .nav li a {
+    color: Black;
+    font-size: 22px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .nav li a:hover {
+    font-weight: bold;
+  }
+  
+  .menu-bg, #menu {
+    top: 50px;
+    left: 100px;
+    position: fixed;
+  }
+  
+  .menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, red, red);
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  
+  .change {
+    display: block;
+  }
+  
+  .change .bar {
+    background-color: black;
+  }
+  
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  
+  .change #bar2 {
+    opacity: 0;
+  }
+  
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+  .change-bg {
+    width: 520px;
+    height: 460px;
+    transform: translate(-60%,-30%);
+  }
+
+  /* RESPONSIVE */
+
+  @media screen and (max-width:769px)
+  {
+    .title-box
+    {
+      width: 80%;
+    }
+    .contact-box
+    {
+      width: 70%;
+    }
+    .title-size
+    {
+      font-size: 50px;
+    }
+    .menu-bg, #menu 
+    {
+      top: 25px;
+      left: 60px;
+      position: fixed;
+    }
+  }
