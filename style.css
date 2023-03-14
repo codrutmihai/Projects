@@ -1,0 +1,265 @@
+/* HOMEPAGE */
+
+.site-background
+{
+    background-color: black;
+}
+.Container
+{
+    position:relative;
+    display: flex;
+    justify-content: left;
+    width: 60%;
+    max-height: 1000px;
+    margin:auto;
+}
+h1
+{
+    line-height: 175px;
+    padding-top: 125px;
+}
+p
+{
+    color:white;
+}
+a
+{
+    text-decoration: none;
+}
+.text
+{
+    font-size: 110px;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    padding-left: 175px;
+}
+.Hello:after
+{
+    content: 'Hello!';
+}
+.Hello:hover:after
+{
+    content: 'About';
+}
+.Iam:after
+{
+    content: 'I am';
+    color:red;
+}
+.Iam:hover:after
+{
+    content: 'Work';
+}
+.Codrut:after
+{
+    content: "Codrut";
+    color: red;
+}
+.Codrut:hover:after
+{
+    content: 'Contact';
+}
+
+.animate 
+{
+	-moz-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-webkit-animation-fill-mode:backwards;
+	-moz-animation-fill-mode:backwards;
+	animation-fill-mode:backwards;
+}
+@-webkit-keyframes animate 
+{
+	0% {opacity: 0;-webkit-transform: translateY(100%);}
+	100% {opacity: 1;-webkit-transform: translateY(0%);}	
+}
+@keyframes animate 
+{
+	0% {opacity: 0;transform: translateY(30vh);} /* WORK ON THISSS! */
+/* 	0% {transform: translateY(100%);} */
+	100% {opacity: 1;transform: translateY(0%);}	
+}
+
+.image
+{
+    z-index: -9;	
+	position: fixed;
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 35%;
+    background-image: url(profile3.jpg);
+	background-repeat: no-repeat; 
+}
+
+/* NAV BAR */
+#menu {
+    z-index: 2;
+  }
+  
+  #menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  
+  #bar3 {
+    transform: translateY(4px);
+  }
+  
+  .nav {
+    transition: 0.3s ease;
+    display: none;
+  }
+  
+  .nav ul {
+    padding: 0 22px;
+  }
+  
+  .nav li {
+    list-style: none;
+    padding: 12px 0;
+  }
+  
+  .nav li a {
+    color: Black;
+    font-size: 22px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .nav li a:hover {
+    font-weight: bold;
+  }
+  
+  .menu-bg, #menu {
+    top: 50px;
+    left: 100px;
+    position: fixed;
+  }
+  
+  .menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, red, red);
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  
+  .change {
+    display: block;
+  }
+  
+  .change .bar {
+    background-color: black;
+  }
+  
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  
+  .change #bar2 {
+    opacity: 0;
+  }
+  
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+  .change-bg {
+    width: 520px;
+    height: 460px;
+    transform: translate(-60%,-30%);
+  }
+
+  /*  HOVER   */
+.on-hover, .on-hover--40 
+{
+	transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.on-hover:hover 
+{
+	margin-left: 40px;
+	transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);	
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1024px)
+ {
+    .image 
+    {
+        left: 5%;
+    }
+    h1
+    {
+        padding-top: 75px;
+    }
+    .text
+    {
+        font-size: 60px;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width:769px)
+ {
+    .image 
+    {
+        left: 0%;
+    }
+    h1
+    {
+        padding-top: 75px;
+    }
+    .text
+    {
+        font-size: 60px;
+        padding-left: 0;
+    }
+    .menu-bg, #menu 
+    {
+        top: 25px;
+        left: 50px;
+        position: fixed;
+    }
+ }
+@media screen and (max-width:480px)
+ {
+    .image 
+    {
+        left: -30%;
+    }
+    h1
+    {
+        padding-top: 50px;
+    }
+    .text
+    {
+        font-size: 50px;
+        padding-left: 0;
+    }
+    .menu-bg, #menu 
+    {
+        top: 10px;
+        left: 25px;
+        position: fixed;
+    }
+}
